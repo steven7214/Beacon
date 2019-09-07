@@ -35,9 +35,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.024170271515557396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
+                            <segmentedControl opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
                                 <rect key="frame" x="0.0" y="69" width="414" height="35.5"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.5" id="rVP-9O-9gT"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                                     <segment title="Safe"/>
                                     <segment title="Rescuer"/>
                                 </segments>
-                                <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="statusBarChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="zRv-H8-sus"/>
                                 </connections>
