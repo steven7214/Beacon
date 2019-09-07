@@ -19,23 +19,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    func startReceivingLocationChanges() {
-        let authorizationStatus = CLLocationManager.authorizationStatus()
-        if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
-            // User has not authorized access to location information.
-            return
-        }
-        // Do not start services that aren't available.
-        if !CLLocationManager.locationServicesEnabled() {
-            // Location services is not available.
-            return
-        }
-        // Configure and start the service.
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters //change to fit app needs
-        locationManager.distanceFilter = 100.0  // In meters.
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-    }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
@@ -43,7 +27,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
-        map.setRegion(region, animated: false)
+        map.setRegion(region, animated: true)
         self.map.showsUserLocation = true
         
     }
