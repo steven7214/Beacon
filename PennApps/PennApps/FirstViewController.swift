@@ -12,9 +12,9 @@ import CoreLocation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
-    //Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
+    @IBOutlet weak var infoButton: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -73,6 +73,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    @IBAction func loadInfo(_ sender: UIButton) {
+        
+    }
     
 }
 
