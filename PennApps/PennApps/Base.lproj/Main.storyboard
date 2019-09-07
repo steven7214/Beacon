@@ -35,9 +35,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.024170271515557396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
+                            <segmentedControl opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
                                 <rect key="frame" x="0.0" y="69" width="414" height="35.5"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.5" id="rVP-9O-9gT"/>
                                 </constraints>
@@ -48,15 +48,26 @@
                                     <segment title="Safe"/>
                                     <segment title="Rescuer"/>
                                 </segments>
-                                <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="statusBarChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="zRv-H8-sus"/>
+                                </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-aW-CvC">
+                                <rect key="frame" x="372" y="840" width="22" height="22"/>
+                                <connections>
+                                    <action selector="loadInfo:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7ga-Vh-NGL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="Ae0-yd-Uex"/>
+                            <constraint firstItem="TWu-aW-CvC" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="E3Q-9m-w5Z"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="25" id="ITM-29-dQ1"/>
                             <constraint firstItem="KAu-g9-LvY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="-44" id="T0B-HB-T56"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="TWu-aW-CvC" secondAttribute="trailing" constant="20" id="T11-fc-yha"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="VWD-Mj-YZs"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
@@ -79,6 +90,7 @@
                         <color key="badgeColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="infoButton" destination="TWu-aW-CvC" id="zW0-1m-V51"/>
                         <outlet property="map" destination="KAu-g9-LvY" id="cUo-tG-zdj"/>
                         <outlet property="status" destination="wBd-iu-G84" id="5oT-jc-Tdm"/>
                     </connections>

@@ -12,9 +12,9 @@ import CoreLocation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
-    //Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
+    @IBOutlet weak var infoButton: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -62,7 +62,27 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             map.addAnnotation(p)
         }
     }
+    @IBAction func statusBarChange(_ sender: UISegmentedControl) {
+        switch status.selectedSegmentIndex {
+        case 0:
+            map.tintColor = UIColor.red
+        case 1:
+            map.tintColor = UIColor.orange
+        case 2:
+            map.tintColor = UIColor.gray
+        case 3:
+            map.tintColor = UIColor(red:0.09, green:0.99, blue:0.25, alpha:1.0)
 
-
+        case 4:
+            map.tintColor = UIColor(red:0.46, green:0.89, blue: 0.90, alpha:1.0)
+        default:
+            break
+        }
+    }
+    
+    @IBAction func loadInfo(_ sender: UIButton) {
+        
+    }
+    
 }
 
