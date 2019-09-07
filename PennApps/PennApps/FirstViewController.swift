@@ -34,6 +34,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         map.setRegion(region, animated: true)
         self.map.showsUserLocation = true
         
+        
     }
     
     
@@ -43,6 +44,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.gray
         
