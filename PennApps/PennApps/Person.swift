@@ -47,6 +47,8 @@ class Person: NSObject, MKAnnotation {
     }
     
     var subtitle: String? {
-        return locationName
+        let a:String = String(format:"%.2f", coordinate.latitude)
+        let b:String = String(format:"%.2f", coordinate.longitude)
+        return "(" + a + ", " + b + ")"
     }
 }
