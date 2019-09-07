@@ -19,8 +19,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
        let location = locations[0]
@@ -40,17 +38,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         
-        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: 75.1932)
-    
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: location, span: span)
-        map.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "UPenn"
-        map.addAnnotation(annotation)
-        
+        let person = Person(title: "1",
+                              locationName: "AK",
+                              discipline: "individual",
+                              coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
+        map.addAnnotation(person)
     }
 
 
