@@ -61,7 +61,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             print("behind iOS 11")
         }
         
-        let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4)
+        let allPeople = PersonList(numPerson: 10, minLat: 37.5, maxLat: 37.9, minLong: -122.5, maxLong: -122.4)
         
         let people = allPeople.generateList()
         
