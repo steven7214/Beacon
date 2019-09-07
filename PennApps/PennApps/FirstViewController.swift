@@ -27,7 +27,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     {
         locationManager.stopUpdatingLocation()
 
-       let location = locations[0]
+        let location = locations[0]
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
@@ -86,6 +86,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func infoButton(_ sender: AnyObject) {
         
+    }
+    
+    
+    @IBAction func userZoom(_ sender: Any) {
+        self.locationManager.startUpdatingLocation()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
