@@ -80,9 +80,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    @IBAction func loadInfo(_ sender: UIButton) {
+    @IBAction func infoButton(_ sender: AnyObject) {
         
+        print("button pressed")
+        self.performSegue(withIdentifier: "infoButtonSegue", sender: self)
     }
+    
+    
+    
     
 }
 
