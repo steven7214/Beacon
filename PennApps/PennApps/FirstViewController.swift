@@ -52,16 +52,26 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
             status: "bob" //change this later to represent status
         )
+
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         } else {
-            // print (behind iOS 11)
+            print("behind iOS 11")
+        }
+        
+        let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4)
+        
+        let people = allPeople.generateList()
+        
+        for p in people {
+            map.addAnnotation(p)
         }
         map.addAnnotation(person)
         timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(testing), userInfo: nil, repeats: true)
         
+
     }
     
     @objc func testing() {

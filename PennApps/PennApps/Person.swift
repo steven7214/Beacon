@@ -25,6 +25,7 @@ class Person: NSObject, MKAnnotation {
         super.init()
     }
     
+    
     var markerTintColor: UIColor  {
         switch status {
         case "emergency":
