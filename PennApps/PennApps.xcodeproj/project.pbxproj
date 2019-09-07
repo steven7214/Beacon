@@ -15,6 +15,7 @@
 		9279824F23233B3300129FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9279824D23233B3300129FB5 /* LaunchScreen.storyboard */; };
 		9279825A23233B3300129FB5 /* PennAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279825923233B3300129FB5 /* PennAppsTests.swift */; };
 		9279826523233B3300129FB5 /* PennAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279826423233B3300129FB5 /* PennAppsUITests.swift */; };
+		92798274232349AE00129FB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92798273232349AE00129FB5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9279826023233B3300129FB5 /* PennAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9279826423233B3300129FB5 /* PennAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PennAppsUITests.swift; sourceTree = "<group>"; };
 		9279826623233B3300129FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92798273232349AE00129FB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92798274232349AE00129FB5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				9279825823233B3300129FB5 /* PennAppsTests */,
 				9279826323233B3300129FB5 /* PennAppsUITests */,
 				9279824023233B3000129FB5 /* Products */,
+				92798272232349AD00129FB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				9279826623233B3300129FB5 /* Info.plist */,
 			);
 			path = PennAppsUITests;
+			sourceTree = "<group>";
+		};
+		92798272232349AD00129FB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92798273232349AE00129FB5 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
