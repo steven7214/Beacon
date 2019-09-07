@@ -20,7 +20,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         locationManager.stopUpdatingLocation()
@@ -38,11 +37,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         
-        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: 75.1932)
+        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932)
     
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
