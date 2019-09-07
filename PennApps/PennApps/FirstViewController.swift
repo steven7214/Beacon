@@ -41,8 +41,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
-        let samplePoint = Artwork(title: "Pittsburgh", locationName: "Pittsburgh", discipline: "City", coordinate: CLLocationCoordinate2D(latitude: 40.4406, longitude: 79.9959))
-        map.addAnnotation(samplePoint)
+        
+        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: 75.1932)
+    
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "UPenn"
+        map.addAnnotation(annotation)
+        
     }
 
 
