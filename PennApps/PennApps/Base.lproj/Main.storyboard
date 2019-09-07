@@ -83,7 +83,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="map" destination="KAu-g9-LvY" id="cUo-tG-zdj"/>
-                        <outlet property="status" destination="wBd-iu-G84" id="5oT-jc-Tdm"/>
+                        <outlet property="status" destination="wBd-iu-G84" id="eYL-Ep-N3a"/>
                         <outlet property="viewContainer" destination="tsR-hK-woN" id="OCo-EF-Bez"/>
                     </connections>
                 </viewController>

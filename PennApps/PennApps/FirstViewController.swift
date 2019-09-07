@@ -50,10 +50,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
             status: "bob"
         )
-
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
         
-        person.changeColor(newTitle: "3")
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -63,10 +61,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         map.addAnnotation(person)
         
         
-        rescuerView = Rescuer().view
-        neutralView = Neutral().view
-        viewContainer.addSubview(neutralView)
-        viewContainer.addSubview(rescuerView)
+        //rescuerView = Rescuer().view
+        //neutralView = Neutral().view
+        //viewContainer.addSubview(neutralView)
+        //viewContainer.addSubview(rescuerView)
     }
 
 
