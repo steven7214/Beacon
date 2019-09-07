@@ -42,12 +42,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
         locationManager.startUpdatingLocation()
-        map.tintColor = UIColor.green
+        map.tintColor = UIColor.gray
         
-        let person = Person(title: "4",
-                              locationName: "AK",
-                              discipline: "ind",
-                              coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230))
+        let person = Person(title: "",
+            locationName: "AK",
+            discipline: "ind",
+            coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
+            status: "bob"
+        )
+
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
