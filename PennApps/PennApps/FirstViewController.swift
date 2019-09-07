@@ -14,7 +14,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     //Map
     @IBOutlet weak var map: MKMapView!
-   
+    @IBOutlet weak var status: UISegmentedControl!
+    
     
     let locationManager = CLLocationManager()
     

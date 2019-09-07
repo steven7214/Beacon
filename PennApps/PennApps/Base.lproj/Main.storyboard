@@ -73,6 +73,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="map" destination="KAu-g9-LvY" id="cUo-tG-zdj"/>
+                        <outlet property="status" destination="wBd-iu-G84" id="5oT-jc-Tdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
