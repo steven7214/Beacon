@@ -154,8 +154,17 @@
                                 <action selector="dismissInfo:" destination="1wN-Gd-d9A" id="I9q-Ta-vnm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="01t-cU-PKE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="01t-cU-PKE">
+                            <connections>
+                                <action selector="storeValues:" destination="1wN-Gd-d9A" id="kZy-vD-H8T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="disasterBar" destination="oid-J2-yAp" id="8mS-3A-TRE"/>
+                        <outlet property="nameBar" destination="p4t-2m-2eW" id="Saw-nT-jWn"/>
+                        <outlet property="phoneBar" destination="eVc-Gj-g3l" id="XsU-Ea-I7b"/>
+                    </connections>
                 </viewController>
                 <exit id="tBU-Z6-0LX" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pl-Uc-R7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
