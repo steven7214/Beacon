@@ -89,6 +89,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    
+    @IBAction func userZoom(_ sender: Any) {
+        self.locationManager.startUpdatingLocation()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(segue.destination)
         if segue.destination is UINavigationController {
