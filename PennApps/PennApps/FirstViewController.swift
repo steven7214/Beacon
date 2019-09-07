@@ -17,6 +17,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
     
+    @IBAction func settings(_ sender: Any) {
+    }
+    
     var rescuerView: UIView!
     var neutralView: UIView!
     
