@@ -38,6 +38,9 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
                                 <rect key="frame" x="0.0" y="69" width="414" height="35.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="rVP-9O-9gT"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Emergency"/>
                                     <segment title="Help"/>
@@ -50,7 +53,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="wBd-iu-G84" secondAttribute="bottom" constant="323" id="1h3-rf-aRV"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="Ae0-yd-Uex"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="25" id="ITM-29-dQ1"/>

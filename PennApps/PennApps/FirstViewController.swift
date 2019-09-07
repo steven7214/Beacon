@@ -15,10 +15,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     //Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
-
-    mySegmentedControl setFrame:frame
-    CGRect frame = mySegmentedControl.frame;
-    mySegmentedControl setFrame:CGRectMake(frame.origin.0.1, frame.origin.0.3, frame.size.width, fNewHeight);
     
     let locationManager = CLLocationManager()
     
