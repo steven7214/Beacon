@@ -22,10 +22,10 @@ class Person: NSObject, MKAnnotation {
         self.discipline = discipline
         self.coordinate = coordinate
         self.status = status
-        
-        
         super.init()
     }
+    
+   
     
     
     var markerTintColor: UIColor  {

@@ -44,6 +44,7 @@ class PersonList {
         }
         
         
+       //add information stuff here
         return Person(title: stat, locationName: "UPenn", discipline: "ind", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), status: stat)
     }
     

@@ -108,28 +108,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4t-2m-2eW">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4t-2m-2eW">
                                 <rect key="frame" x="70" y="177" width="274" height="30"/>
-                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="nameField:" destination="tBU-Z6-0LX" eventType="editingDidEnd" id="FB8-8g-f5H"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What disaster are you in?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oid-J2-yAp">
-                                <rect key="frame" x="70" y="374" width="274" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-LN-YbQ">
-                                <rect key="frame" x="184" y="444" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-Gj-g3l">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-Gj-g3l">
                                 <rect key="frame" x="70" y="276" width="274" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -142,17 +134,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="What disaster are you in?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oid-J2-yAp">
+                                <rect key="frame" x="70" y="382" width="274" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oid-J2-yAp" firstAttribute="leading" secondItem="EFM-Kd-pzR" secondAttribute="leading" constant="70" id="NFm-8Y-G3h"/>
-                            <constraint firstItem="p4t-2m-2eW" firstAttribute="leading" secondItem="EFM-Kd-pzR" secondAttribute="leading" constant="70" id="Oqn-pz-LSo"/>
-                            <constraint firstItem="EFM-Kd-pzR" firstAttribute="trailing" secondItem="eVc-Gj-g3l" secondAttribute="trailing" constant="70" id="YP9-ex-mr5"/>
-                            <constraint firstItem="EFM-Kd-pzR" firstAttribute="trailing" secondItem="p4t-2m-2eW" secondAttribute="trailing" constant="70" id="nrJ-4k-OkG"/>
-                            <constraint firstItem="eVc-Gj-g3l" firstAttribute="leading" secondItem="EFM-Kd-pzR" secondAttribute="leading" constant="70" id="nsv-G4-MtI"/>
-                            <constraint firstItem="EFM-Kd-pzR" firstAttribute="trailing" secondItem="oid-J2-yAp" secondAttribute="trailing" constant="70" id="z10-9n-mQV"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EFM-Kd-pzR"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Info" id="KBf-t5-UOe">
@@ -169,6 +161,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="commentsBar" destination="Mlv-z9-a1i" id="aSA-U1-dnD"/>
                         <outlet property="disasterBar" destination="oid-J2-yAp" id="8mS-3A-TRE"/>
                         <outlet property="nameBar" destination="p4t-2m-2eW" id="Saw-nT-jWn"/>
                         <outlet property="phoneBar" destination="eVc-Gj-g3l" id="XsU-Ea-I7b"/>

@@ -10,6 +10,7 @@
 		54EB2F16232374C300B1867D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB2F15232374C300B1867D /* Person.swift */; };
 		54EB2F1823238AEC00B1867D /* PersonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB2F1723238AEC00B1867D /* PersonViews.swift */; };
 		54EB2F1E2323F06000B1867D /* RandomPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB2F1D2323F06000B1867D /* RandomPerson.swift */; };
+		8F3ED307232446FE0080ADB5 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3ED306232446FE0080ADB5 /* UserInformation.swift */; };
 		923DEBAE23240298004CC22A /* InfoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923DEBAD23240298004CC22A /* InfoButtonViewController.swift */; };
 		9279824323233B3000129FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279824223233B3000129FB5 /* AppDelegate.swift */; };
 		9279824523233B3000129FB5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279824423233B3000129FB5 /* FirstViewController.swift */; };
@@ -42,6 +43,7 @@
 		54EB2F15232374C300B1867D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		54EB2F1723238AEC00B1867D /* PersonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViews.swift; sourceTree = "<group>"; };
 		54EB2F1D2323F06000B1867D /* RandomPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPerson.swift; sourceTree = "<group>"; };
+		8F3ED306232446FE0080ADB5 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		923DEBAD23240298004CC22A /* InfoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoButtonViewController.swift; path = ../InfoButtonViewController.swift; sourceTree = "<group>"; };
 		9279823F23233B3000129FB5 /* PennApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9279824223233B3000129FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,9 +111,10 @@
 		9279824123233B3000129FB5 /* PennApps */ = {
 			isa = PBXGroup;
 			children = (
-				923DEBAD23240298004CC22A /* InfoButtonViewController.swift */,
 				9279824223233B3000129FB5 /* AppDelegate.swift */,
+				923DEBAD23240298004CC22A /* InfoButtonViewController.swift */,
 				54EB2F15232374C300B1867D /* Person.swift */,
+				8F3ED306232446FE0080ADB5 /* UserInformation.swift */,
 				54EB2F1723238AEC00B1867D /* PersonViews.swift */,
 				54EB2F1D2323F06000B1867D /* RandomPerson.swift */,
 				9279824423233B3000129FB5 /* FirstViewController.swift */,
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923DEBAE23240298004CC22A /* InfoButtonViewController.swift in Sources */,
+				8F3ED307232446FE0080ADB5 /* UserInformation.swift in Sources */,
 				9279824323233B3000129FB5 /* AppDelegate.swift in Sources */,
 				54EB2F1E2323F06000B1867D /* RandomPerson.swift in Sources */,
 				54EB2F1823238AEC00B1867D /* PersonViews.swift in Sources */,
