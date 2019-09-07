@@ -14,6 +14,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     //Map
     @IBOutlet weak var map: MKMapView!
+   
     
     let locationManager = CLLocationManager()
     
@@ -38,17 +39,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
        let location = locations[0]
-        
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
-        
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
-        
         map.setRegion(region, animated: false)
-        
         self.map.showsUserLocation = true
-        
         
     }
     
@@ -58,6 +53,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        map.tintColor = UIColor.green
         let samplePoint = Artwork(title: "Pittsburgh", locationName: "Pittsburgh", discipline: "City", coordinate: CLLocationCoordinate2D(latitude: 40.4406, longitude: 79.9959))
         map.addAnnotation(samplePoint)
     }
