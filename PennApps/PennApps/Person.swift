@@ -32,14 +32,18 @@ class Person: NSObject, MKAnnotation {
             return .red
         case "help":
             return .orange
-        case "safe":
-            return .green
-        case "rescuer":
-            return .blue
         case "neutral":
             return .gray
+        case "safe":
+            return UIColor(red:0.09, green:0.99, blue:0.25, alpha:1.0)
+        case "rescuer":
+            return UIColor(red:0.46, green:0.89, blue: 0.90, alpha:1.0)
         default:
-            return .purple
+            return UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         }
+    }
+    
+    var subtitle: String? {
+        return locationName
     }
 }
