@@ -16,9 +16,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
     
-    
     let locationManager = CLLocationManager()
     
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         locationManager.stopUpdatingLocation()
@@ -36,7 +36,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         

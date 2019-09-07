@@ -35,9 +35,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.024170271515557396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-iu-G84">
                                 <rect key="frame" x="0.0" y="69" width="414" height="35.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="rVP-9O-9gT"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Emergency"/>
                                     <segment title="Help"/>
@@ -53,7 +56,6 @@
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="Ae0-yd-Uex"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="25" id="ITM-29-dQ1"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="wBd-iu-G84" secondAttribute="bottom" constant="323" id="RZK-ts-umk"/>
                             <constraint firstItem="KAu-g9-LvY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="-44" id="T0B-HB-T56"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="VWD-Mj-YZs"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
