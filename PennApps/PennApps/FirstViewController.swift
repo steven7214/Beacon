@@ -40,7 +40,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         
-        let person = Person(title: "4",
+        let person = Person(title: "1",
                               locationName: "AK",
                               discipline: "ind",
                               coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230))
