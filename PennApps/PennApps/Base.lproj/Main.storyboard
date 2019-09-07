@@ -49,6 +49,9 @@
                                     <segment title="Rescuer"/>
                                 </segments>
                                 <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="statusBarChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="zRv-H8-sus"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
