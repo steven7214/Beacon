@@ -53,13 +53,21 @@
                                     <action selector="statusBarChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="zRv-H8-sus"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-aW-CvC">
+                                <rect key="frame" x="372" y="840" width="22" height="22"/>
+                                <connections>
+                                    <action selector="loadInfo:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7ga-Vh-NGL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="Ae0-yd-Uex"/>
+                            <constraint firstItem="TWu-aW-CvC" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="E3Q-9m-w5Z"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="25" id="ITM-29-dQ1"/>
                             <constraint firstItem="KAu-g9-LvY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="-44" id="T0B-HB-T56"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="TWu-aW-CvC" secondAttribute="trailing" constant="20" id="T11-fc-yha"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="VWD-Mj-YZs"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
@@ -82,6 +90,7 @@
                         <color key="badgeColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="infoButton" destination="TWu-aW-CvC" id="zW0-1m-V51"/>
                         <outlet property="map" destination="KAu-g9-LvY" id="cUo-tG-zdj"/>
                         <outlet property="status" destination="wBd-iu-G84" id="5oT-jc-Tdm"/>
                     </connections>
