@@ -15,14 +15,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     //Map
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var status: UISegmentedControl!
-    
-    @IBAction func settings(_ sender: Any) {
-    }
-    
-    var rescuerView: UIView!
-    var neutralView: UIView!
-    
+
     let locationManager = CLLocationManager()
     
 
@@ -62,17 +55,22 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             // print (behind iOS 11)
         }
         map.addAnnotation(person)
-        
-        
-        rescuerView = Rescuer().view
-        neutralView = Neutral().view
-        viewContainer.addSubview(neutralView)
-        viewContainer.addSubview(rescuerView)
     }
 
 
+   
     @IBAction func switchViewAction(_ sender: UISegmentedControl) {
-        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("0")
+            //break
+        case 1:
+            print("1")
+            //break
+        default:
+            print("def")
+            //break
+        }
         
     }
 }
