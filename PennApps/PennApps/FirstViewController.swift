@@ -58,6 +58,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        let samplePoint = Artwork(title: "Pittsburgh", locationName: "Pittsburgh", discipline: "City", coordinate: CLLocationCoordinate2D(latitude: 40.4406, longitude: 79.9959))
+        map.addAnnotation(samplePoint)
     }
 
 
