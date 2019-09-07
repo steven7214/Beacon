@@ -40,6 +40,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
@@ -95,9 +96,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func infoButton(_ sender: AnyObject) {
         
-        print("button pressed")
-        self.performSegue(withIdentifier: "infoButtonSegue", sender: self)
     }
+    
+    
     
     @IBAction func loadInfo(_ sender: UIButton) {
         test += 1
