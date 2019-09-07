@@ -15,7 +15,25 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     //Map
     @IBOutlet weak var map: MKMapView!
     
-    let manager = CLLocationManager()
+    let locationManager = CLLocationManager()
+    
+    func startReceivingLocationChanges() {
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
+            // User has not authorized access to location information.
+            return
+        }
+        // Do not start services that aren't available.
+        if !CLLocationManager.locationServicesEnabled() {
+            // Location services is not available.
+            return
+        }
+        // Configure and start the service.
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters //change to fit app needs
+        locationManager.distanceFilter = 100.0  // In meters.
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
@@ -35,11 +53,12 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        [super viewDidLoad];
+        locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
+        locationManager.delegate = self; // we set the delegate of locationManager to self.
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
+        
+        [locationManager startUpdatingLocation];  //requesting location updates
     }
 
 
