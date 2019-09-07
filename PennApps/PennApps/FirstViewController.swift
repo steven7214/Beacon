@@ -18,14 +18,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     
    
-    var user = UserInformation(information: ["test","","",""])
+    var user = UserInformation(information: ["","","",""])
     
     let locationManager = CLLocationManager()
     
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation() //need to add timer to update location some time
 
         let location = locations[0]
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
@@ -33,6 +33,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         map.setRegion(region, animated: true)
         self.map.showsUserLocation = true
+        
         
     }
     
@@ -43,6 +44,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.gray
         
@@ -57,7 +59,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
         // Pittsburgh let allPeople = PersonList(numPerson: 10, minLat: 39.9, maxLat: 40.0, minLong: -75.2, maxLong: -75.1)
         
-        let people = allPeople.generateList()
+        let people = allPeople.generateList() //
         
         for p in people {
             map.addAnnotation(p)
@@ -66,6 +68,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
+
     
     @IBAction func statusBarChange(_ sender: UISegmentedControl) {
         switch status.selectedSegmentIndex {
@@ -96,9 +99,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(segue.destination)
         if segue.destination is UINavigationController {
-            print("yes")
             let navVC = segue.destination as? UINavigationController
-            
             let dest = navVC?.viewControllers.first as? InfoButtonViewController
             dest?.user = user
         }
