@@ -46,6 +46,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
             status: "bob"
         )
+
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
