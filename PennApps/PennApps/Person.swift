@@ -10,32 +10,35 @@ import Foundation
 import MapKit
 
 class Person: NSObject, MKAnnotation {
-    var title: String?
+    let title: String?
     let locationName: String
     let discipline: String
-    var coordinate: CLLocationCoordinate2D
+    let coordinate: CLLocationCoordinate2D
+    var status: String
     
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, status: String) {
         self.title = title
         self.locationName = locationName
         self.discipline = discipline
         self.coordinate = coordinate
-        
+        self.status = status
         super.init()
     }
     
     var markerTintColor: UIColor  {
-        switch title {
-        case "1":
+        switch status {
+        case "emergency":
             return .red
-        case "2":
+        case "help":
             return .orange
-        case "3":
-            return .purple
-        case "4":
-            return .blue
-        default:
+        case "safe":
             return .green
+        case "rescuer":
+            return .blue
+        case "neutral":
+            return .gray
+        default:
+            return .purple
         }
     }
 }
