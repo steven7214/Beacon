@@ -53,12 +53,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidLoad() {
-        [super viewDidLoad];
-        locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
-        locationManager.delegate = self; // we set the delegate of locationManager to self.
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
-        
-        [locationManager startUpdatingLocation];  //requesting location updates
+        super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 
 
