@@ -17,9 +17,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var infoButton: UIButton!
     
     
-    var timer:Timer!
-    var test:Int = 0
    
+    var user = UserInformation(information: ["test","","",""])
     
     let locationManager = CLLocationManager()
     
@@ -51,7 +50,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             map.register(PersonMarkerView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         } else {
-            print("behind iOS 11")
+            print("Not iOS 11 or after")
         }
         
         let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4)
@@ -64,18 +63,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             map.addAnnotation(p)
         }
         
-        timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(testing), userInfo: nil, repeats: true)
-        
 
     }
     
-    @objc func testing() {
-        test += 1
-        if (test > 5) {
-            timer.invalidate()
-        }
-        print(test)
-    }
     
     @IBAction func statusBarChange(_ sender: UISegmentedControl) {
         switch status.selectedSegmentIndex {
@@ -98,12 +88,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    
-    
-    @IBAction func loadInfo(_ sender: UIButton) {
-        test += 1
-        print(test)
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
+        if segue.destination is UINavigationController {
+            print("yes")
+            let navVC = segue.destination as? UINavigationController
+            
+            let dest = navVC?.viewControllers.first as? InfoButtonViewController
+            dest?.user = user
+        }
     }
     
     
