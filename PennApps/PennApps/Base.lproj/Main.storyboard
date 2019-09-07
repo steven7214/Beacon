@@ -64,6 +64,9 @@
                                 <rect key="frame" x="328" y="756" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="userZoom:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FaR-yW-kaM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
