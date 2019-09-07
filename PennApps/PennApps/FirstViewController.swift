@@ -15,11 +15,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     //Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
-    
+
+    mySegmentedControl setFrame:frame
+    CGRect frame = mySegmentedControl.frame;
+    mySegmentedControl setFrame:CGRectMake(frame.origin.0.1, frame.origin.0.3, frame.size.width, fNewHeight);
     
     let locationManager = CLLocationManager()
     
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         locationManager.stopUpdatingLocation()
@@ -41,17 +44,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         
-        let location = CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932)
-    
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: location, span: span)
-        map.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "UPenn"
-        map.addAnnotation(annotation)
-        
+        let person = Person(title: "4",
+                              locationName: "AK",
+                              discipline: "ind",
+                              coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230))
+        // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
+        if #available(iOS 11.0, *) {
+            map.register(PersonMarkerView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        } else {
+            // print (behind iOS 11)
+        }
+        map.addAnnotation(person)
     }
 
 

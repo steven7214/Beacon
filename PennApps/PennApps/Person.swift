@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class Artwork: NSObject, MKAnnotation {
+class Person: NSObject, MKAnnotation {
     let title: String?
     let locationName: String
     let discipline: String
@@ -24,7 +24,18 @@ class Artwork: NSObject, MKAnnotation {
         super.init()
     }
     
-    var subtitle: String? {
-        return locationName
+    var markerTintColor: UIColor  {
+        switch title {
+        case "1":
+            return .red
+        case "2":
+            return .orange
+        case "3":
+            return .purple
+        case "4":
+            return .blue
+        default:
+            return .green
+        }
     }
 }
