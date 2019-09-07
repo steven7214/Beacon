@@ -16,7 +16,6 @@ class Person: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
     var status: String
     
-    
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, status: String) {
         self.title = title
         self.locationName = locationName
@@ -49,6 +48,6 @@ class Person: NSObject, MKAnnotation {
     var subtitle: String? {
         let a:String = String(format:"%.2f", coordinate.latitude)
         let b:String = String(format:"%.2f", coordinate.longitude)
-        return "(" + a + ", " + b + ")"
+        return "(" + a + ", " + " " + b + ")"
     }
 }
