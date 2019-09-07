@@ -15,21 +15,7 @@ class InfoButtonViewController: UIViewController {
     @IBOutlet weak var disasterBar: UITextField!
     @IBOutlet weak var commentsBar: UITextView!
     
-    var user: UserInformation
-    
-    init(user: UserInformation) {
-        self.user = user
-        let information = user.getInformation()
-        nameBar.text = information[0]
-        phoneBar.text = information[1]
-        disasterBar.text = information[2]
-        commentsBar.text = information[3]
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var user: UserInformation!
     
 
     
@@ -38,7 +24,11 @@ class InfoButtonViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let information = user.getInformation()
+        nameBar.text = information[0]
+        phoneBar.text = information[1]
+        disasterBar.text = information[2]
+        commentsBar.text = information[3]
         // Do any additional setup after loading the view.
     }
  
@@ -47,5 +37,12 @@ class InfoButtonViewController: UIViewController {
         user.setInformation(information: information)
         dismissInfo((Any).self)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is FirstViewController {
+            
+            let dest = segue.destination as? FirstViewController
+            dest?.user = user
+        }
     }
 }
