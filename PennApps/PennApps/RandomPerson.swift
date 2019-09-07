@@ -45,7 +45,7 @@ class PersonList {
         
         
        //add information stuff here
-        return Person(title: stat, locationName: "UPenn", discipline: "ind", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), status: stat)
+        return Person(title: stat, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), status: stat)
     }
     
     func generateList() -> [Person] {
