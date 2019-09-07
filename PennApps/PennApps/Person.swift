@@ -1,5 +1,5 @@
 //
-//  Artwork.swift
+//  Person.swift
 //  PennApps
 //
 //  Created by Aditya Kannan on 9/7/19.
@@ -10,10 +10,10 @@ import Foundation
 import MapKit
 
 class Person: NSObject, MKAnnotation {
-    let title: String?
+    var title: String?
     let locationName: String
     let discipline: String
-    let coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D
     
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
         self.title = title

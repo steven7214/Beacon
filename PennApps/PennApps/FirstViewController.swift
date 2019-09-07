@@ -45,6 +45,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
                               discipline: "ind",
                               coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230))
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
+        
+        person.changeColor(newTitle: "3")
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
