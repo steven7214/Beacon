@@ -51,6 +51,7 @@
                                 <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="switch:" destination="9pv-A4-QxB" eventType="valueChanged" id="ojC-bF-3Up"/>
+                                    <action selector="switchViewAction:" destination="9pv-A4-QxB" eventType="valueChanged" id="XM1-b0-sxy"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
