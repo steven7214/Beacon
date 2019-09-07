@@ -15,7 +15,7 @@ class Person: NSObject, MKAnnotation {
     let discipline: String
     let coordinate: CLLocationCoordinate2D
     var status: String
-    let 
+    
     
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, status: String) {
         self.title = title
@@ -23,10 +23,10 @@ class Person: NSObject, MKAnnotation {
         self.discipline = discipline
         self.coordinate = coordinate
         self.status = status
-        
-        
         super.init()
     }
+    
+   
     
     
     var markerTintColor: UIColor  {

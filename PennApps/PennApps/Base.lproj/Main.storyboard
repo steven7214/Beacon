@@ -123,11 +123,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-LN-YbQ">
-                                <rect key="frame" x="184" y="444" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-Gj-g3l">
                                 <rect key="frame" x="70" y="276" width="274" height="30"/>
                                 <nil key="textColor"/>
@@ -169,6 +164,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="commentsBar" destination="Mlv-z9-a1i" id="aSA-U1-dnD"/>
                         <outlet property="disasterBar" destination="oid-J2-yAp" id="8mS-3A-TRE"/>
                         <outlet property="nameBar" destination="p4t-2m-2eW" id="Saw-nT-jWn"/>
                         <outlet property="phoneBar" destination="eVc-Gj-g3l" id="XsU-Ea-I7b"/>
