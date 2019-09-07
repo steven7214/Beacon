@@ -49,6 +49,9 @@
                                     <segment title="Rescuer"/>
                                 </segments>
                                 <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="switch:" destination="9pv-A4-QxB" eventType="valueChanged" id="ojC-bF-3Up"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,6 +84,7 @@
                     <connections>
                         <outlet property="map" destination="KAu-g9-LvY" id="cUo-tG-zdj"/>
                         <outlet property="status" destination="wBd-iu-G84" id="5oT-jc-Tdm"/>
+                        <outlet property="viewContainer" destination="tsR-hK-woN" id="OCo-EF-Bez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

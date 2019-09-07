@@ -11,10 +11,14 @@ import MapKit
 import CoreLocation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet var viewContainer: UIView!
     
     //Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var status: UISegmentedControl!
+    
+    var rescuerView: UIView!
+    var neutralView: UIView!
     
     let locationManager = CLLocationManager()
     
@@ -52,8 +56,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             // print (behind iOS 11)
         }
         map.addAnnotation(person)
+        
+        
+        rescuerView = Rescuer().view
+        neutralView = Neutral().view
+        viewContainer.addSubview(neutralView)
+        viewContainer.addSubview(rescuerView)
     }
 
 
+    @IBAction func switchViewAction(_ sender: UISegmentedControl) {
+        
+        
+    }
 }
 
