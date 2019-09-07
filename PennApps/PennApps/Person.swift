@@ -41,4 +41,8 @@ class Person: NSObject, MKAnnotation {
             return .purple
         }
     }
+    
+    var subtitle: String? {
+        return locationName
+    }
 }
