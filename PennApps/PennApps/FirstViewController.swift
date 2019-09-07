@@ -40,10 +40,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.green
         
-        let person = Person(title: "1",
+        let person = Person(title: "4",
                               locationName: "AK",
-                              discipline: "individual",
-                              coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
+                              discipline: "ind",
+                              coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230))
+        // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
+        if #available(iOS 11.0, *) {
+            map.register(PersonMarkerView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        } else {
+            // print (behind iOS 11)
+        }
         map.addAnnotation(person)
     }
 

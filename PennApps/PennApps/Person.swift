@@ -24,7 +24,18 @@ class Person: NSObject, MKAnnotation {
         super.init()
     }
     
-    var subtitle: String? {
-        return locationName
+    var markerTintColor: UIColor  {
+        switch title {
+        case "1":
+            return .red
+        case "2":
+            return .orange
+        case "3":
+            return .purple
+        case "4":
+            return .blue
+        default:
+            return .green
+        }
     }
 }
