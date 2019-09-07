@@ -16,6 +16,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var status: UISegmentedControl!
     @IBOutlet weak var infoButton: UIButton!
     
+    
+    var timer:Timer!
+    var test:Int = 0
+   
+    
     let locationManager = CLLocationManager()
     
 
@@ -32,6 +37,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -40,12 +46,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         map.tintColor = UIColor.gray
         
-        //let person = Person(title: "",
-        //    locationName: "AK",
-        //    discipline: "ind",
-        //    coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
-        //    status: "safe"
-        //)
+        let person = Person(title: "",
+            locationName: "AK",
+            discipline: "ind",
+            coordinate: CLLocationCoordinate2D(latitude: 37.8270, longitude: -122.4230),
+            status: "bob" //change this later to represent status
+        )
+
         // coordinate: CLLocationCoordinate2D(latitude: 39.9522, longitude: -75.1932))
         if #available(iOS 11.0, *) {
             map.register(PersonMarkerView.self,
@@ -61,7 +68,20 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         for p in people {
             map.addAnnotation(p)
         }
+        map.addAnnotation(person)
+        timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(testing), userInfo: nil, repeats: true)
+        
+
     }
+    
+    @objc func testing() {
+        test += 1
+        if (test > 5) {
+            timer.invalidate()
+        }
+        print(test)
+    }
+    
     @IBAction func statusBarChange(_ sender: UISegmentedControl) {
         switch status.selectedSegmentIndex {
         case 0:
@@ -80,7 +100,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func loadInfo(_ sender: UIButton) {
-        
+        test += 1
+        print(test)
     }
     
 }
