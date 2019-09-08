@@ -29,6 +29,7 @@ class InfoButtonViewController: UIViewController {
         phoneBar.text = information[1]
         disasterBar.text = information[2]
         commentsBar.text = information[3]
+       
         // Do any additional setup after loading the view.
     }
  
