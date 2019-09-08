@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var map: MKMapView!
@@ -23,6 +24,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
 
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         locationManager.stopUpdatingLocation() //need to add timer to update location some time
@@ -62,6 +64,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         let people = allPeople.generateList() //
         
         for p in people {
+            
             map.addAnnotation(p)
         }
         
