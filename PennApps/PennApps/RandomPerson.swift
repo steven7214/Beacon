@@ -32,20 +32,20 @@ class PersonList {
         let randStatus = Double.random(in: 0 ..< 1)
         var stat = ""
         if (randStatus < 0.1) {
-            stat = "emergency"
+            stat = "EMERGENCY"
         } else if (0.1 < randStatus && randStatus < 0.5) {
-            stat = "help"
+            stat = "HELP"
         } else if (0.5 < randStatus && randStatus < 0.7) {
-            stat = "neutral"
+            stat = "UNKNOWN"
         } else if (0.7 < randStatus && randStatus < 0.9) {
-            stat = "safe"
+            stat = "SAFE"
         } else {
-            stat = "rescuer"
+            stat = "RESCUER"
         }
         
         
        //add information stuff here
-        return Person(title: stat, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), status: stat)
+        return Person(title:stat, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), status: stat)
     }
     
     func generateList() -> [Person] {
