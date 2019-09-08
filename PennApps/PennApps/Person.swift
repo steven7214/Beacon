@@ -26,9 +26,9 @@ class Person: NSObject, MKAnnotation {
         switch status {
         case "EMERGENCY":
             return .red
-        case "HELP":
+        case "AT RISK":
             return .orange
-        case "UNKNOWN":
+        case "UNCERTAIN":
             return .gray
         case "SAFE":
             return UIColor(red:0.09, green:0.99, blue:0.25, alpha:1.0)

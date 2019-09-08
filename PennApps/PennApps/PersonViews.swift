@@ -35,10 +35,9 @@ extension MKAnnotationView {
 @available(iOS 11.0, *)
 class PersonMarkerView: MKMarkerAnnotationView {
     var information:[String] = []
-
     let names = ["Steven", "Helen", "Aditya", "Alex", "Audrey", "Melissa", "Andrew", "Michael", "Jennifer", "Jenny", "Elizabeth", "Paul", "Oliver"]
     //name, number, disaster, additional comments
-    func generateInformation() -> [String] {
+    func generateInformation(title:String) -> [String] {
         let nameIndex = Int.random(in: 0 ..< names.count)
         var number = ""
         for i in 0 ..< 10 {
@@ -51,9 +50,18 @@ class PersonMarkerView: MKMarkerAnnotationView {
             if (i == 6) {
                 number += "-"
             }
-            number += String(Int.random(in: 0 ..< 10))
+            var num = Int.random(in: 0 ..< 10)
+            if ((i == 0 || i == 3) && num == 0) {
+                num = Int.random(in: 1 ..< 10)
+            }
+            number += String(num)
+            
         }
-        let temp = [names[nameIndex],  number, "Hurricane"]
+        var disaster = ""
+        if (title == "AT RISK" || title == "EMERGENCY") {
+            disaster = "Hurricane"
+        }
+        let temp = [names[nameIndex],  number, disaster]
         return temp
 
     }
@@ -66,7 +74,7 @@ class PersonMarkerView: MKMarkerAnnotationView {
             // 1
             guard let person = newValue as? Person else { return }
             canShowCallout = true
-            loadCustomLines(customLines: generateInformation())
+            loadCustomLines(customLines: generateInformation(title: person.title!))
             calloutOffset = CGPoint(x: -5, y: 5)
             rightCalloutAccessoryView = UIButton(type: .system)
             // 2
