@@ -72,6 +72,7 @@ class PersonMarkerView: MKMarkerAnnotationView {
             // 2
             markerTintColor = person.markerTintColor
             // glyphText = String(person.discipline.first!)
+            
         }
     }
 }
