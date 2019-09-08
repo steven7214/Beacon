@@ -57,9 +57,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             print("Not iOS 11 or after")
         }
         
-        let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4)
+        // let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4) Alcatraz
         
-        // Pittsburgh let allPeople = PersonList(numPerson: 10, minLat: 39.9, maxLat: 40.0, minLong: -75.2, maxLong: -75.1)
+        let allPeople = PersonList(numPerson: 10, minLat: 39.9, maxLat: 40.0, minLong: -75.2, maxLong: -75.1) // Philadelphia
         
         let people = allPeople.generateList() //
         
