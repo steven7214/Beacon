@@ -34,9 +34,9 @@ class PersonList {
         if (randStatus < 0.1) {
             stat = "EMERGENCY"
         } else if (0.1 < randStatus && randStatus < 0.5) {
-            stat = "HELP"
+            stat = "AT RISK"
         } else if (0.5 < randStatus && randStatus < 0.7) {
-            stat = "UNKNOWN"
+            stat = "UNCERTAIN"
         } else if (0.7 < randStatus && randStatus < 0.9) {
             stat = "SAFE"
         } else {

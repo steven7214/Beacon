@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoButtonViewController: UIViewController {
+class InfoButtonViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     @IBOutlet weak var nameBar: UITextField!
     @IBOutlet weak var phoneBar: UITextField!
@@ -25,13 +25,39 @@ class InfoButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let information = user.getInformation()
+        
+        nameBar.delegate = self
+        nameBar.returnKeyType = .done
+        nameBar.autocapitalizationType = UITextAutocapitalizationType.words
         nameBar.text = information[0]
+        
         phoneBar.text = information[1]
+        
+        disasterBar.delegate = self
+        disasterBar.returnKeyType = .done
+        disasterBar.autocapitalizationType = UITextAutocapitalizationType.words
         disasterBar.text = information[2]
+        
+        commentsBar.delegate = self
+        commentsBar.autocapitalizationType = UITextAutocapitalizationType.sentences
+    
         commentsBar.text = information[3]
-       
         // Do any additional setup after loading the view.
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+
  
     @IBAction func storeValues(_ sender: Any) {
         let information = [nameBar.text, phoneBar.text, disasterBar.text, commentsBar.text] as! [String]

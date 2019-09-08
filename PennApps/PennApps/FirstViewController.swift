@@ -64,7 +64,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
         // let allPeople = PersonList(numPerson: 10, minLat: 37.8, maxLat: 37.9, minLong: -122.5, maxLong: -122.4) Alcatraz
         
-        let allPeople = PersonList(numPerson: 10, minLat: 39.9, maxLat: 40.0, minLong: -75.2, maxLong: -75.1) // Philadelphia
+        let allPeople = PersonList(numPerson: 10, minLat: 39.9, maxLat: 40.0, minLong: -75.3, maxLong: -75.1) // Philadelphia
         
         let people = allPeople.generateList() //
         
