@@ -22,19 +22,17 @@ class Person: NSObject, MKAnnotation {
     }
     
    
-    
-    
     var markerTintColor: UIColor  {
         switch status {
-        case "emergency":
+        case "EMERGENCY":
             return .red
-        case "help":
+        case "HELP":
             return .orange
-        case "neutral":
+        case "UNKNOWN":
             return .gray
-        case "safe":
+        case "SAFE":
             return UIColor(red:0.09, green:0.99, blue:0.25, alpha:1.0)
-        case "rescuer":
+        case "RESCUER":
             return UIColor(red:0.46, green:0.89, blue: 0.90, alpha:1.0)
         default:
             return UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)

@@ -44,7 +44,7 @@
                                 <segments>
                                     <segment title="Emergency"/>
                                     <segment title="Help"/>
-                                    <segment title="Neutral" width="82"/>
+                                    <segment title="Unknown" width="82"/>
                                     <segment title="Safe"/>
                                     <segment title="Rescuer"/>
                                 </segments>
