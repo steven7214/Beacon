@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PennApps.xcodeproj">
+      location = "self:/Users/helendong/PennAPPS/PennApps/Beacon.xcodeproj">
    </FileRef>
 </Workspace>

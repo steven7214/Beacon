@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9279823E23233B3000129FB5"
                BuildableName = "PennApps.app"
                BlueprintName = "PennApps"
-               ReferencedContainer = "container:PennApps.xcodeproj">
+               ReferencedContainer = "container:Beacon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "9279825423233B3300129FB5"
                BuildableName = "PennAppsTests.xctest"
                BlueprintName = "PennAppsTests"
-               ReferencedContainer = "container:PennApps.xcodeproj">
+               ReferencedContainer = "container:Beacon.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "9279825F23233B3300129FB5"
                BuildableName = "PennAppsUITests.xctest"
                BlueprintName = "PennAppsUITests"
-               ReferencedContainer = "container:PennApps.xcodeproj">
+               ReferencedContainer = "container:Beacon.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "9279823E23233B3000129FB5"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
-            ReferencedContainer = "container:PennApps.xcodeproj">
+            ReferencedContainer = "container:Beacon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "9279823E23233B3000129FB5"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
-            ReferencedContainer = "container:PennApps.xcodeproj">
+            ReferencedContainer = "container:Beacon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "9279823E23233B3000129FB5"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
-            ReferencedContainer = "container:PennApps.xcodeproj">
+            ReferencedContainer = "container:Beacon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
