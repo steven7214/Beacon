@@ -44,7 +44,7 @@ class PersonMarkerView: MKMarkerAnnotationView {
            // rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             // 2
             markerTintColor = person.markerTintColor
-            glyphText = String(person.discipline.first!)
+            // glyphText = String(person.discipline.first!)
         }
     }
 }
