@@ -17,8 +17,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var status: UISegmentedControl!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var settings: UIButton!
     
-   
+    @IBOutlet weak var revertButton: UIButton!
+    
     var user = UserInformation(information: ["","","",""])
     
     let locationManager = CLLocationManager()
@@ -42,7 +44,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        settings.layer.cornerRadius = 30
+        
+        revertButton.layer.cornerRadius = 30
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization() //change this and the info.plist to be always not inuse
