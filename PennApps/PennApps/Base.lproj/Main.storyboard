@@ -53,8 +53,8 @@
                                     <action selector="statusBarChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="zRv-H8-sus"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-aW-CvC">
-                                <rect key="frame" x="354" y="758.5" width="30" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-aW-CvC">
+                                <rect key="frame" x="354" y="763.5" width="30" height="24.5"/>
                                 <color key="backgroundColor" red="0.64916945829999995" green="0.40571221660000001" blue="0.76788546950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.37633831805833651" green="0.2719718467899559" blue="0.50830821700507611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="⚙️">
@@ -66,8 +66,8 @@
                                     <segue destination="fms-0b-XHw" kind="presentation" id="rJn-NM-qGi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-ve-pHT">
-                                <rect key="frame" x="30" y="758.5" width="30" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-ve-pHT">
+                                <rect key="frame" x="30" y="763.5" width="30" height="24.5"/>
                                 <color key="backgroundColor" red="0.64916945833558659" green="0.40571221661646362" blue="0.76788546954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.37633831810000001" green="0.27197184679999997" blue="0.50830821699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="➤">
@@ -83,22 +83,20 @@
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="TWu-aW-CvC" secondAttribute="trailing" constant="30" id="4gx-Vy-3PI"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="Ae0-yd-Uex"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="TWu-aW-CvC" secondAttribute="bottom" constant="69.5" id="Cs5-vM-1Rw"/>
-                            <constraint firstItem="TWu-aW-CvC" firstAttribute="top" secondItem="wBd-iu-G84" secondAttribute="bottom" constant="655" id="FwP-hR-8mF"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="25" id="ITM-29-dQ1"/>
                             <constraint firstItem="TWu-aW-CvC" firstAttribute="leading" secondItem="gnq-ve-pHT" secondAttribute="trailing" constant="294" id="LdN-kn-c4a"/>
                             <constraint firstItem="KAu-g9-LvY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="-44" id="T0B-HB-T56"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="KAu-g9-LvY" secondAttribute="bottom" id="VWD-Mj-YZs"/>
-                            <constraint firstItem="gnq-ve-pHT" firstAttribute="top" secondItem="wBd-iu-G84" secondAttribute="bottom" constant="655" id="aom-ca-rry"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="gnq-ve-pHT" secondAttribute="bottom" constant="69.5" id="cY9-qK-7A4"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="eLM-0F-hGS"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="TWu-aW-CvC" secondAttribute="bottom" constant="70" id="f51-Dp-aLK"/>
                             <constraint firstItem="KAu-g9-LvY" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="jdx-A9-fQU"/>
                             <constraint firstItem="wBd-iu-G84" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="nKx-I9-5nF"/>
                             <constraint firstItem="gnq-ve-pHT" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="30" id="phh-Fu-YQu"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="KAu-g9-LvY" secondAttribute="trailing" id="qDU-Fu-I2L"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="gnq-ve-pHT" secondAttribute="bottom" constant="70" id="qLL-VO-jeS"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="wBd-iu-G84" secondAttribute="trailing" id="zki-fT-eWE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
