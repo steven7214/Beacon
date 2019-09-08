@@ -55,7 +55,7 @@
                             </segmentedControl>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-aW-CvC">
                                 <rect key="frame" x="30" y="766" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.69953371389999996" green="0.88496266700000004" blue="0.92738737309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="c0N-RM-50v"/>
                                     <constraint firstAttribute="height" constant="60" id="gtO-6w-8KV"/>
@@ -73,12 +73,12 @@
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-ve-pHT">
                                 <rect key="frame" x="324" y="766" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.69953371389999996" green="0.88496266700000004" blue="0.92738737309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="E0A-Fb-Ydu"/>
                                     <constraint firstAttribute="width" constant="60" id="ZDi-z3-YTh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="tintColor" red="0.37633831810000001" green="0.27197184679999997" blue="0.50830821699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="➤">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
