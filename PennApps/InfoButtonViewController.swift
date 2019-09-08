@@ -28,16 +28,19 @@ class InfoButtonViewController: UIViewController, UITextFieldDelegate, UITextVie
         
         nameBar.delegate = self
         nameBar.returnKeyType = .done
+        nameBar.autocapitalizationType = UITextAutocapitalizationType.words
         nameBar.text = information[0]
         
         phoneBar.text = information[1]
         
         disasterBar.delegate = self
         disasterBar.returnKeyType = .done
+        disasterBar.autocapitalizationType = UITextAutocapitalizationType.words
         disasterBar.text = information[2]
         
         commentsBar.delegate = self
-      //  commentsBar.returnKeyType = .done
+        commentsBar.autocapitalizationType = UITextAutocapitalizationType.sentences
+    
         commentsBar.text = information[3]
         // Do any additional setup after loading the view.
     }
